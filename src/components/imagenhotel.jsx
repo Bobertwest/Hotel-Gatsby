@@ -8,6 +8,7 @@ const ImageBackground = styled(BackgroundImage)`
 `
 
 const Imagenhotel = () => {
+  //Se hace distructuring, ya que esto devuelve un objeto con el objeto "image" dentro que es lo que necesitamos
   const { image } = useStaticQuery(graphql`
     query {
       image: file(relativePath: { eq: "8.jpg" }) {
@@ -33,6 +34,7 @@ const Imagenhotel = () => {
     flex: 1;
     align-items: center;
     justify-content: center;
+    text-align: center;
 
     h1 {
       font-size: 4rem;
